@@ -63,7 +63,7 @@
 	                    show: true
 				 }
 			};
-			var url = "${pageContext.request.contextPath}/ShowCPUDataServlet";
+			var url = "${pageContext.request.contextPath}/ShowCPUDataController";
 			
 			showData(true);
 			function showData(flag){

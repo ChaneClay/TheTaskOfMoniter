@@ -41,7 +41,7 @@
 		});
 		
 		function download(){
-			var url = "${pageContext.request.contextPath}/FileDownloadServlet?id=" + currentId;
+			var url = "${pageContext.request.contextPath}/FileDownloadController?id=" + currentId;
 			var newWin = window.open(url);
 			//if(! document.all){
 			//	newWin.document.execCommand("SaveAs");
@@ -98,7 +98,7 @@
 		
 		
 		<div id="uploadDialogId" class="easyui-dialog" style="width: 400px;height: 300px;" data-options="modal:true,closed:true,buttons:[{text:'上传',iconCls:'icon-ok',handler:function(){document.forms[0].submit()}},{text:'关闭',handler:closeDialog}]">
-			<form action="${pageContext.request.contextPath}/UploadServlet" method="post" enctype="multipart/form-data">
+			<form action="${pageContext.request.contextPath}/UploadController" method="post" enctype="multipart/form-data">
 				<input type="hidden" name="id" value="${id}" />
 				<table>
 					<tr>

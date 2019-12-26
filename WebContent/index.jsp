@@ -23,10 +23,10 @@
    					<a onclick="addTag(this,'${pageContext.request.contextPath}/pages/disk.jsp')" class="easyui-linkbutton" data-options='plain:true' style="width:100%">磁盘使用监控</a>
    				</div>
    				<div title="文件系统信息监控" data-options="iconCls:'icon-search'" >
-   					<ul id="dirTreeId" class="easyui-tree" data-options="url:'${pageContext.request.contextPath}/ShowDiskDirServlet',lines:true"></ul>
+   					<ul id="dirTreeId" class="easyui-tree" data-options="url:'${pageContext.request.contextPath}/ShowDiskDirController',lines:true"></ul>
    				</div>
    				<div title="远程操作监控" data-options="iconCls:'icon-large-clipart'">
-   					<a onclick="addTag(this,'${pageContext.request.contextPath}/RemoteDesktopServlet')" class="easyui-linkbutton" data-options='plain:true' style="width:100%">远程桌面监控</a>
+   					<a onclick="addTag(this,'${pageContext.request.contextPath}/RemoteDesktopController')" class="easyui-linkbutton" data-options='plain:true' style="width:100%">远程桌面监控</a>
    				</div>
    			</div>
    		</div>
