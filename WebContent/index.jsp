@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/js/themes/default/easyui.css" />
-	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/js/themes/icon.css" />
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.11.0.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.easyui.min.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/monitor.js"></script>
+	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/js/themes/default/easyui.css" />
+	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/js/themes/icon.css" />
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/monitor.js"></script>
 <title>远程服务器性能监控系统</title>
 </head>
 <body>   
@@ -20,8 +20,8 @@
    		<div data-options="region:'west',title:'远程监控'" style="width:200px">
    			<div class="easyui-accordion" data-options="fit:true">
    				<div title="基本性能监控" data-options="iconCls:'icon-large-chart'">
-   					<a onclick="addTag(this,'${pageContext.request.contextPath}/pages/cpu')" class="easyui-linkbutton" data-options='plain:true' style="width:100%">CPU运行监控</a>
-   					<a onclick="addTag(this,'${pageContext.request.contextPath}/pages/disk.jsp')" class="easyui-linkbutton" data-options='plain:true' style="width:100%">磁盘使用监控</a>
+   					<a onclick="addTag(this,'${pageContext.request.contextPath}/cpu')" class="easyui-linkbutton" data-options='plain:true' style="width:100%">CPU运行监控</a>
+   					<a onclick="addTag(this,'${pageContext.request.contextPath}/diskDir')" class="easyui-linkbutton" data-options='plain:true' style="width:100%">磁盘使用监控</a>
    				</div>
    				<div title="文件系统信息监控" data-options="iconCls:'icon-search'" >
    					<ul id="dirTreeId" class="easyui-tree" data-options="url:'${pageContext.request.contextPath}/ShowDiskDirController',lines:true"></ul>

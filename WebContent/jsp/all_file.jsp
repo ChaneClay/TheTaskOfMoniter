@@ -6,17 +6,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/monitor.css" />
-	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/js/themes/default/easyui.css" />
-	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/js/themes/icon.css" />
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.11.0.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.easyui.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/css/monitor.css" />
+	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/js/themes/default/easyui.css" />
+	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/js/themes/icon.css" />
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.easyui.min.js"></script>
 	
 	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="${pageContext.request.contextPath}/js/flot/excanvas.min.js"></script><![endif]-->
-	<script language="javascript" type="text/javascript" src="${pageContext.request.contextPath}/js/flot/jquery.flot.js"></script>
-	<script language="javascript" type="text/javascript" src="${pageContext.request.contextPath}/js/flot/jquery.flot.pie.js"></script>
+	<script language="javascript" type="text/javascript" src="${pageContext.request.contextPath}/static/js/flot/jquery.flot.js"></script>
+	<script language="javascript" type="text/javascript" src="${pageContext.request.contextPath}/static/js/flot/jquery.flot.pie.js"></script>
 	
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/monitor.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/monitor.js"></script>
 	
 	<script type="text/javascript" >
 	
@@ -74,20 +74,20 @@
 		<c:forEach items="${allFileBean}" var="fileBean">
 			<c:if test="${fileBean.file}">
 				<div class="fileStyle" data="${fileBean.id}">
-					<img src="${pageContext.request.contextPath}/image/FileType/Middle/${fileBean.icoName}" style="width: 120px;height: 100px" />
+					<img src="${pageContext.request.contextPath}/static/image/FileType/Middle/${fileBean.icoName}" style="width: 120px;height: 100px" />
 					<span>${fileBean.text}</span>
 				</div>
 			</c:if>
 			<c:if test="${not fileBean.file}">
 				<div class="fileStyle" onclick="showAll(this)" data="${fileBean.id}">
-					<img src="${pageContext.request.contextPath}/image/FileType/Middle/${fileBean.icoName}" style="width: 120px;height: 100px" />
+					<img src="${pageContext.request.contextPath}/static/image/FileType/Middle/${fileBean.icoName}" style="width: 120px;height: 100px" />
 					<span>${fileBean.text}</span>
 				</div>
 			</c:if>
 		</c:forEach>
 		<%--最有一个为上传内容 --%>
 		<div class="fileStyle"  onclick="openDialog()">
-			<img src="${pageContext.request.contextPath}/image/FileType/Middle/upload.png" style="width: 120px;height: 100px" />
+			<img src="${pageContext.request.contextPath}/static/image/FileType/Middle/upload.png" style="width: 120px;height: 100px" />
 			<span>${treeBean.text}</span>
 		</div>
 		

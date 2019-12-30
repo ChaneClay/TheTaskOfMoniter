@@ -5,16 +5,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/monitor.css" />
-	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/js/themes/default/easyui.css" />
-	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/js/themes/icon.css" />
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.11.0.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.easyui.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/css/monitor.css" />
+	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/js/themes/default/easyui.css" />
+	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/static/js/themes/icon.css" />
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/jquery.easyui.min.js"></script>
 	
 	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="${pageContext.request.contextPath}/js/flot/excanvas.min.js"></script><![endif]-->
-	<script language="javascript" type="text/javascript" src="${pageContext.request.contextPath}/js/flot/jquery.flot.js"></script>
+	<script language="javascript" type="text/javascript" src="${pageContext.request.contextPath}/static/js/flot/jquery.flot.js"></script>
 	
-	<script type="text/javascript" src="${pageContext.request.contextPath}/js/monitor.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/static/js/monitor.js"></script>
 	
 	
 	<script type="text/javascript" >
@@ -63,7 +63,7 @@
 	                    show: true
 				 }
 			};
-			var url = "${pageContext.request.contextPath}/ShowCPUDataController";
+			var url = "${pageContext.request.contextPath}/ShowCPUData";
 			
 			showData(true);
 			function showData(flag){
@@ -141,6 +141,7 @@
 </head>
 <body>
 	<div class="demo-container">
+	hhhhhhhhhhhhhhhh
 		<%-- 
 		<div id="cpuShowId" class="demo-placeholder"></div>
 		<div id="cpuShowId2" class="demo-placeholder"></div>
