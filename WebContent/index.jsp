@@ -16,10 +16,11 @@
    		<div data-options="region:'north'" style="height:100px;text-align: center">
    			<h1>远程服务器性能监控系统</h1>
    		</div>
+   		
    		<div data-options="region:'west',title:'远程监控'" style="width:200px">
    			<div class="easyui-accordion" data-options="fit:true">
    				<div title="基本性能监控" data-options="iconCls:'icon-large-chart'">
-   					<a onclick="addTag(this,'${pageContext.request.contextPath}/pages/cpu.jsp')" class="easyui-linkbutton" data-options='plain:true' style="width:100%">CPU运行监控</a>
+   					<a onclick="addTag(this,'${pageContext.request.contextPath}/pages/cpu')" class="easyui-linkbutton" data-options='plain:true' style="width:100%">CPU运行监控</a>
    					<a onclick="addTag(this,'${pageContext.request.contextPath}/pages/disk.jsp')" class="easyui-linkbutton" data-options='plain:true' style="width:100%">磁盘使用监控</a>
    				</div>
    				<div title="文件系统信息监控" data-options="iconCls:'icon-search'" >
