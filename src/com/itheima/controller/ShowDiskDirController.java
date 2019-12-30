@@ -28,7 +28,7 @@ public class ShowDiskDirController extends HttpServlet {
 			throws ServletException, IOException {
 		
 		try {
-			System.out.println("ShowDiskDirServlet-doGet");
+			System.out.println("ShowDiskDirController-doGet");
 			List<Map<String, Object>> dataList = new ArrayList<Map<String,Object>>();
 			
 			//获得指定盘符
@@ -74,11 +74,11 @@ public class ShowDiskDirController extends HttpServlet {
 		}
 	}
 	@RequestMapping("/diskDir")
-	public String diskDir(HttpServletRequest request, HttpServletResponse response)
+	public void diskDir(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("ShowDiskDirServlet-doPost");
-		ShowDiskDir(request, response);
-		return "disk";
+		System.out.println("ShowDiskDirController-doPost");
+		ShowDiskDir(request,response);
+		
 	}
 
 }

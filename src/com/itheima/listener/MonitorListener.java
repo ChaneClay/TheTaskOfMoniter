@@ -30,8 +30,11 @@ public class MonitorListener implements ServletContextListener {
 
 	// [{'label':'','data':[]} , {}]
 	private void setCPU(final ServletContextEvent sce) {
+		System.out.println("MonitorListener-setCPU");
 		try {
+			
 			//1 获得存放的容器
+			@SuppressWarnings("unchecked")
 			List<Map<String, Object>> cpuData = (List<Map<String, Object>>) sce.getServletContext().getAttribute("cpuData");
 			if (cpuData == null) {
 				cpuData = new ArrayList<Map<String, Object>>();
@@ -77,9 +80,10 @@ public class MonitorListener implements ServletContextListener {
 	}
 	
 	public void handleData(List<Object[]> data , String currentData){
+		System.out.println("MonitorListener-handleData");
 		if(data.size() < showXaxisCount){
 			//添加
-			data.add(new Object[]{data.size(), currentData});
+			data.add(new Object[]{data.size(), currentData});	
 		} else {
 			//换掉第一个
 			Object[] arr = data.remove(0);

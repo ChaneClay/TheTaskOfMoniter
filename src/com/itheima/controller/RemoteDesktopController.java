@@ -13,6 +13,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
 public class RemoteDesktopController extends HttpServlet {
 	
 	private Robot robot;
@@ -26,16 +30,18 @@ public class RemoteDesktopController extends HttpServlet {
 			throw new RuntimeException("切屏程序初始化异常", e);
 		}
 	}
-
-	public void doGet(HttpServletRequest request, HttpServletResponse response)
+	
+	@RequestMapping("RemoteDesktop")
+	public void RemoteDesktop(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		this.init();
 		response.setHeader("refresh", "1");
 		System.out.println("RemoteDesktopServlet-doGet");
 		BufferedImage bi = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
 		ImageIO.write(bi, "jpeg", response.getOutputStream());
 	}
 
-	public void doPost(HttpServletRequest request, HttpServletResponse response)
+	public void RemoteDesktop2(HttpServletRequest request, HttpServletResponse response)		//没有用到
 			throws ServletException, IOException {
 		System.out.println("RemoteDesktopServlet-doPost");
 		this.doGet(request, response);

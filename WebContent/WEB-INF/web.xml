@@ -5,6 +5,10 @@
   	http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" 
   	id="WebApp_ID" version="3.1">
   	
+  	
+ <listener>
+		<listener-class>com.itheima.listener.MonitorListener</listener-class>
+	</listener>
  <!-- 编码过滤器 -->
  <filter>
   <filter-name>encoding</filter-name>
