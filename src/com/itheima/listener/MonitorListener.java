@@ -30,7 +30,6 @@ public class MonitorListener implements ServletContextListener {
 
 	// [{'label':'','data':[]} , {}]
 	private void setCPU(final ServletContextEvent sce) {
-		System.out.println("MonitorListener-setCPU");
 		try {
 			
 			//1 获得存放的容器
@@ -80,7 +79,6 @@ public class MonitorListener implements ServletContextListener {
 	}
 	
 	public void handleData(List<Object[]> data , String currentData){
-		System.out.println("MonitorListener-handleData");
 		if(data.size() < showXaxisCount){
 			//添加
 			data.add(new Object[]{data.size(), currentData});	

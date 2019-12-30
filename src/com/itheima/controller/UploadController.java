@@ -35,7 +35,7 @@ public class UploadController extends HttpServlet {
 			FileUtils.copyInputStreamToFile(fi.getInputStream(), new File(id,fileName));
 			
 			//重定向到
-			String url = request.getContextPath() + "/ShowAllFileServlet?id=" + id;
+			String url = request.getContextPath() + "/ShowAllFile?id=" + id;
 			response.sendRedirect(url);
 		} catch (Exception e) {
 			throw new RuntimeException(e);

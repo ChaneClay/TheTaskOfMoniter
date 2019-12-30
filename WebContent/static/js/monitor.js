@@ -24,10 +24,11 @@ function setTree(){
 function openTag(node){
 	//addTag(node.id,$(this).tree("options").url + "?id=" + node.id);
 	var uri = node.target.baseURI;
+	
 	if(! uri){
-		uri = "/monitor/";
+		uri = "/TheTaskOfMonitor/";
 	}
-	addTag(node.id, uri + "ShowAllFileServlet?id=" + node.id);
+	addTag(node.id, uri + "ShowAllFile.action?id=" + encodeURI(encodeURI(node.id)));
 }
 
 

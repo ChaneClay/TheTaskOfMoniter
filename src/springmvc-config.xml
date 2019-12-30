@@ -1,3 +1,5 @@
+
+
 <beans xmlns="http://www.springframework.org/schema/beans"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xmlns:mvc="http://www.springframework.org/schema/mvc"
@@ -17,21 +19,16 @@
 	<!-- 配置视图解析器 -->
 	<bean class=
     "org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/jsp/" />
+		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 
 	</bean>
-	<!-- <mvc:interceptors>
+	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/**"/>
-			<bean class="com.sz.interceptor.LoginInterceptor"/>
+			<bean class="com.itheima.interceptor.LoginInterceptor"/>
 		</mvc:interceptor>
-	</mvc:interceptors> -->
-
-
-
-
-
+	</mvc:interceptors>
 
 	<!-- <mvc:default-servlet-handler default-servlet-name="springmvc" /> -->
 

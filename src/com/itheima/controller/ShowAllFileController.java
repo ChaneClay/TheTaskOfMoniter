@@ -10,15 +10,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
 import com.itheima.po.*;
 import com.itheima.utils.ImageUtils;
 
+@Controller
 public class ShowAllFileController extends HttpServlet {
 
-	public void doGet(HttpServletRequest request, HttpServletResponse response)
+	@RequestMapping("ShowAllFile")
+	public void ShowAllFile(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("ShowAllFileServlet-doGet");
 		String id = request.getParameter("id");//此处容易出现中文乱码
+		id = java.net.URLDecoder.decode(id,"UTF-8");
+		System.out.println("id: "+id);
 		File dir = new File(id);
 		File allFile[] = dir.listFiles();
 		List<FileBean> allFileBean = new ArrayList<FileBean>();
@@ -38,11 +45,11 @@ public class ShowAllFileController extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		request.setAttribute("allFileBean", allFileBean); //所有数据
 		request.setAttribute("id", id);	//当前目录
-		request.getRequestDispatcher("/pages/all_file.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/jsp/all_file.jsp").forward(request, response);
 
 	}
 
-	public void doPost(HttpServletRequest request, HttpServletResponse response)
+	public void doPost22(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("ShowAllFileServlet-doPost");
 		this.doGet(request, response);
