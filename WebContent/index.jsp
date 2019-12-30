@@ -21,7 +21,7 @@
    			<div class="easyui-accordion" data-options="fit:true">
    				<div title="基本性能监控" data-options="iconCls:'icon-large-chart'">
    					<a onclick="addTag(this,'${pageContext.request.contextPath}/cpu')" class="easyui-linkbutton" data-options='plain:true' style="width:100%">CPU运行监控</a>
-   					<a onclick="addTag(this,'${pageContext.request.contextPath}/diskDir')" class="easyui-linkbutton" data-options='plain:true' style="width:100%">磁盘使用监控</a>
+   					<a onclick="addTag(this,'${pageContext.request.contextPath}/diskData')" class="easyui-linkbutton" data-options='plain:true' style="width:100%">磁盘使用监控</a>
    				</div>
    				<div title="文件系统信息监控" data-options="iconCls:'icon-search'" >
    					<ul id="dirTreeId" class="easyui-tree" data-options="url:'${pageContext.request.contextPath}/ShowDiskDirController',lines:true"></ul>

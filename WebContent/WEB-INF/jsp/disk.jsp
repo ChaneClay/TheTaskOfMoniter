@@ -54,7 +54,7 @@
 			$.plot("#cpuShowId2",data,options);
 			*/
 			
-			var url = "${pageContext.request.contextPath}/ShowDiskDataController";
+			var url = "${pageContext.request.contextPath}/showDiskData";
 			$.post(url,function(data){
 				for(var i = 0 ; i < data.length; i++){
 					

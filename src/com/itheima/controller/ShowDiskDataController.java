@@ -17,13 +17,15 @@ import org.hyperic.sigar.FileSystem;
 import org.hyperic.sigar.FileSystemUsage;
 import org.hyperic.sigar.Sigar;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class ShowDiskDataController extends HttpServlet {
 	//1 
 	private Sigar sigar = new Sigar();
-
-	public void doGet(HttpServletRequest request, HttpServletResponse response)
+	
+	@RequestMapping("showDiskData")
+	public void showDiskData(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try {
 			System.out.println("ShowDiskDataServlet-doGet");
@@ -76,11 +78,12 @@ public class ShowDiskDataController extends HttpServlet {
 			throw new RuntimeException(e);
 		}
 	}
-
-	public void doPost(HttpServletRequest request, HttpServletResponse response)
+	@RequestMapping("diskData")
+	public String disk(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("ShowDiskDataServlet-doPost");
-		this.doGet(request, response);
+		//this.doGet(request, response);
+		return "disk";
 	}
 	
 	/*
