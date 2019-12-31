@@ -70,7 +70,6 @@
 				$.post(url,function(data){
 					for(var i = 0 ; i < data.length; i++){
 						//创建div
-						console.log("wohenshuai");
 						var divId = "cpuShowId" + i;
 						if(flag){
 							$(".demo-container").append("<div id='"+divId+"'  class='demo-placeholder'></div>");

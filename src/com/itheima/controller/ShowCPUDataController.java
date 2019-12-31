@@ -39,7 +39,6 @@ public class ShowCPUDataController{
 	  //		"";
 	  response.getWriter().print(jsonData);
   
-	  System.out.println(jsonData);
  }
 
 }

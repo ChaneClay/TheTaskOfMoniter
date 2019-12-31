@@ -19,7 +19,7 @@ import com.itheima.utils.ImageUtils;
 @Controller
 public class ShowAllFileController extends HttpServlet {
 
-	@RequestMapping("ShowAllFile")
+	@RequestMapping("/login/ShowAllFile")
 	public void ShowAllFile(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("ShowAllFileServlet-doGet");

@@ -28,7 +28,8 @@ function openTag(node){
 	if(! uri){
 		uri = "/TheTaskOfMonitor/";
 	}
-	addTag(node.id, uri + "ShowAllFile.action?id=" + encodeURI(encodeURI(node.id)));
+	
+	addTag(node.id, uri + "/ShowAllFile?id=" + encodeURI(encodeURI(node.id)));
 }
 
 

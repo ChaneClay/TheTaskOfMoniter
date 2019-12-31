@@ -5,7 +5,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
-import com.itheima.po.FileBean;
+import com.itheima.po.User;
 
 public class LoginInterceptor implements HandlerInterceptor {
     @Override
@@ -16,16 +16,16 @@ public class LoginInterceptor implements HandlerInterceptor {
         String url = request.getRequestURI();
 
         HttpSession session = request.getSession();
-        FileBean user = (FileBean) session.getAttribute("USER_SESSION");
+        User user = (User) session.getAttribute("USER_SESSION");
 
-        if (user != null && (url.indexOf("/login") >= 0 ||  url.indexOf("/register") >= 0 ||  url.indexOf("jsp/login.jsp") >= 0)){
+        if (user != null && (url.indexOf("/login") >= 0 ||  url.indexOf("/toRegister") >= 0 ||  url.indexOf("jsp/login.jsp") >= 0)){
             System.out.println("你已经登录！");
-            request.getRequestDispatcher("/jsp/index.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/jsp/home.jsp").forward(request, response);
 
         }
 
         //以下页面不拦截
-        if ((url.indexOf("/login") >= 0 || url.indexOf("/register") >= 0 || url.indexOf("/isRegistered") >= 0 || url.indexOf("/create") >= 0 ) && user == null){
+        if ((url.indexOf("/login") >= 0 || url.indexOf("/toRegister") >= 0 || url.indexOf("/isRegistered") >= 0 || url.indexOf("/create") >= 0 ) && user == null){
             System.out.println(url);
             return true;
         }

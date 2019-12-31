@@ -3,7 +3,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>登录页面</title>
+<title>注册页面</title>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
 <link href="${pageContext.request.contextPath}/css/style.css"
 	   type=text/css rel=stylesheet>
@@ -18,7 +18,7 @@
 function check(){
     var username = $("#username").val();
     var password = $("#password").val();
-    if(username=="" || password==""){
+    if(usercode=="" || password==""){
     	$("#message").text("账号或密码不能为空！");
         return false;
     }  
@@ -27,7 +27,7 @@ function check(){
 </script>
 </head>
 <body leftMargin=0 topMargin=0 marginwidth="0" marginheight="0"
-	style="background-image: linear-gradient(to right, rgba(20,20,50,15), rgba(50,0,20,0));  ">
+	style="background-image: linear-gradient(to right, rgba(20,20,50,15), rgba(50,0,20,0));">
 <div ALIGN="center">
 <table border="0" width="1140px" cellspacing="0" cellpadding="0"
                                                            id="table1">
@@ -52,7 +52,7 @@ function check(){
 			 <span id="message">${msg}</span>
 		</font>
 		<%-- 提交后的位置：/WEB-INF/jsp/customer.jsp--%>
-		<form action="${pageContext.request.contextPath}/login" 
+		<form action="${pageContext.request.contextPath}/register" 
 			                       method="post" onsubmit="return check()">
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
           账&nbsp;号：<input id="username" type="text" name="username" />
@@ -60,8 +60,8 @@ function check(){
           密&nbsp;码：<input id="password" type="password" name="password" />
           <br /><br />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          <input type="submit" value="登录" />
-          <input type="button" value="注册" onclick="window.location.href='${pageContext.request.contextPath}/toRegister'" />
+          <input type="submit" value="注册" />
+         
 		 </form>
 	 </fieldset>
 	</td>
