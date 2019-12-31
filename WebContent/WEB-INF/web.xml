@@ -60,6 +60,7 @@
  <servlet-mapping>
     <servlet-name>default</servlet-name>
     <url-pattern>/static/*</url-pattern>
+    <url-pattern>/layui/*</url-pattern>
 </servlet-mapping>
 
 </web-app>

@@ -3,7 +3,7 @@
 <head>
     <title>研究生管理系统</title>
     <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css">
-   <!--  <link rel="stylesheet" type="text/css" href="/static/layui/css/layui.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="/static/layui/css/layui.css"> -->
     <style>
         .login{
             background-color: rgba(254, 255, 162, 0.23);
@@ -31,13 +31,12 @@
     <%--<div style="color: red">${errMsg}</div>--%>
 <div class="login">
     <div>
-        <h2 class="system">研究生管理系统</h2>
+        <h2 class="system">MONITOR</h2>
     </div>
 
     <hr class="layui-bg-orange">
 
-    <form class="layui-form" action="${ctx}/stu/login" method="post">     <!--表单-->
-    <%--<form class="layui-form" action="/jsp/dev/login.jsp" method="post">     <!--表单-->--%>
+    <form class="layui-form" action="${pageContext.request.contextPath}/login" method="post">     <!--表单-->
         <br/>
         <div class="layui-form-item">
             <label class="layui-form-label">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号：</label>
