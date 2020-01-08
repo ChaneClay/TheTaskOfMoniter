@@ -18,17 +18,20 @@ public class LoginInterceptor implements HandlerInterceptor {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("USER_SESSION");
 
-        if (user != null && (url.indexOf("/login") >= 0 ||  url.indexOf("/toRegister") >= 0 ||  url.indexOf("jsp/login.jsp") >= 0)){
-            System.out.println("你已经登录！");
-            request.getRequestDispatcher("/WEB-INF/jsp/home.jsp").forward(request, response);
+		/*
+		 * if (user != null && (url.indexOf("/login") >= 0 || url.indexOf("/toRegister")
+		 * >= 0 || url.indexOf("jsp/login.jsp") >= 0)){ System.out.println("你已经登录！");
+		 * request.getRequestDispatcher("/WEB-INF/jsp/home.jsp").forward(request,
+		 * response);
+		 * 
+		 * }
+		 */
 
-        }
-
-        //以下页面不拦截
-        if ((url.indexOf("/login") >= 0 || url.indexOf("/toRegister") >= 0 || url.indexOf("/isRegistered") >= 0 || url.indexOf("/create") >= 0 ) && user == null){
-            System.out.println(url);
-            return true;
-        }
+		/*
+		 * //以下页面不拦截 if ((url.indexOf("/login") >= 0 || url.indexOf("/toRegister") >= 0
+		 * || url.indexOf("/isRegistered") >= 0 || url.indexOf("/create") >= 0 ) && user
+		 * == null){ System.out.println(url); return true; }
+		 */
 
         if (user != null) {
             return true;

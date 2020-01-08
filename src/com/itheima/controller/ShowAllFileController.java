@@ -46,13 +46,13 @@ public class ShowAllFileController extends HttpServlet {
 		request.setAttribute("allFileBean", allFileBean); //所有数据
 		request.setAttribute("id", id);	//当前目录
 		request.getRequestDispatcher("/WEB-INF/jsp/all_file.jsp").forward(request, response);
+		//request.getRequestDispatcher("${pageContext.request.contextPath}/all_file").forward(request, response);
 
 	}
 
-	public void doPost22(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		System.out.println("ShowAllFileServlet-doPost");
-		this.doGet(request, response);
-	}
+	/*
+	 * @RequestMapping("/all_file") public String ShowAll(HttpServletRequest
+	 * request, HttpServletResponse response) { return "all_file"; }
+	 */
 
 }
